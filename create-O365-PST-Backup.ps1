@@ -463,7 +463,6 @@ if(! ($NoO365Export)){
 #define var as array to get the count method
 $myExports = @()
 #$myContent = Get-Content -Path $logExports;
-#$myExports = Get-Content -Path 'C:\Users\ott3101\OneDrive - GEUTEBRÜCK GmbH\it\Azure PowerShell\Exchange-PST-Project\Logs\Exports\Exports.txt'
 
 foreach($line in (Get-Content -Path $logExports)){
     $myExports += $line;
@@ -703,7 +702,6 @@ Copy-Item -FromSession $SourceSession -Path "C:\Users\Administrator\desktop\scri
 #Write-Host "invoke script";
 #script in file
 #az vm run-command invoke --command-id RunPowerShellScript --name $myVMName -g $myRessgroupName --scripts 'Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope LocalMachine'
-#az vm run-command invoke --command-id RunPowerShellScript --name $myVMName -g $myRessgroupName --scripts "& C:\Users\ott3101\OneDrive - GEUTEBRÜCK GmbH\IT\Azure PowerShell\Exchange-PST-Project\copy-O365-PST-Backup.ps1" --parameters "exportName=$exportName" "myResult=$myResult"
 
 #az vm run-command invoke --command-id RunPowerShellScript --name $myVMName -g $myRessgroupName --scripts "Start-Process -FilePath C:\FilesExtracted\copy-O365-PST-Backup.ps1 -ArgumentList -exportName $exportName -myResult $myResult"
 #$mycommand = 'powershell C:\FilesExtracted\copy-O365-PST-Backup.ps1 -exportName {0} -myResult {1}' -f $exportName, $myResult;
